@@ -22,8 +22,6 @@ public class WebConfig implements WebMvcConfigurer {
 	public void addCorsMappings(CorsRegistry registry) {
 
 		String[] origins = getCorsDomains();
-		// {
-		// "https://app-resulttracker-in.firebaseapp.com","https://customertracker-3b055.firebaseapp.com","https://userapp.coursetracker.in","https://admin.coursetracker.in","https://spinsoft.coursetracker.in","https://app.resulttracker.in","https://knowledgetracker.in"};
 		registry.addMapping("/**").allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE").allowedOrigins(origins)
 				.allowedHeaders("*").allowCredentials(true);
 	}
